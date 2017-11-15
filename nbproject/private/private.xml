@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/var/www/html/api/.htaccess</file>
+            <file>file:/var/www/html/api/index.php</file>
+            <file>file:/var/www/html/api/src/Router.php</file>
+            <file>file:/var/www/html/api/config.php</file>
+            <file>file:/var/www/html/api/src/init.php</file>
+            <file>file:/var/www/html/api/App/endpoints.php</file>
+            <file>file:/var/www/html/api/App/Controllers/User.php</file>
+            <file>file:/var/www/html/api/src/Response.php</file>
+        </group>
+    </open-files>
+</project-private>
