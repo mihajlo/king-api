@@ -4,15 +4,15 @@
 @require_once('DB.php');
 @require_once('Response.php');
 @require_once('Router.php');
-
-use Evolution\CodeIgniterDB as CI;
+@require_once('Auth.php');
 
 $route = new Router();
 
+use Evolution\CodeIgniterDB as CI;
 $db=& CI\DB($config['database']);
-$response=new Response();
 
-define('Response',$response);
+define('Response',new Response());
+define('Auth',new Auth());
 
 @require_once($config['app_path'].'endpoints.php');
 

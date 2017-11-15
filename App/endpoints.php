@@ -3,11 +3,11 @@
 
 $route->get('/', function($db){ 
     
+    Auth::validate();
+    
     $data=$db->get('user')->result_array();
     
-    
     Response::json(['data'=>$data],200);
-    
     
 });
 
