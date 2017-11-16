@@ -3,6 +3,7 @@
 @require_once('config.php');
 @require_once('DB.php');
 @require_once('Response.php');
+@require_once('Request.php');
 @require_once('Router.php');
 @require_once('Auth.php');
 
@@ -12,6 +13,7 @@ use Evolution\CodeIgniterDB as CI;
 $db=& CI\DB($config['database']);
 
 define('Response',new Response());
+define('Request',new Request());
 define('Auth',new Auth());
 
 @require_once($config['app_path'].'endpoints.php');

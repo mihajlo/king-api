@@ -16,6 +16,7 @@ class Auth {
           @header('WWW-Authenticate: Basic realm="Authentication"');
           Response::json([],401);
         }
+        return $user;
     }
     
 }

@@ -3,11 +3,11 @@
 
 $route->get('/', function($db){ 
     
-    Auth::validate();
+    $user=Auth::validate();
     
     $data=$db->get('user')->result_array();
     
-    Response::json(['data'=>$data],200);
+    Response::json(['authenticated_user'=>$user,'data'=>$data],200);
     
 });
 
@@ -18,6 +18,7 @@ $route->get('/', function($db){
 
 
 $route->get('/misko/{:id}/{:name}', 'User@index');
+$route->post('/misko/{:id}/{:name}', 'User@post');
 
 
 
