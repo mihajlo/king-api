@@ -2,7 +2,7 @@
 
 $config['api_name'] = 'Test api';
 
-$config['app_path'] = 'App/';
+$config['app_path'] = APP_PATH.'App/';
 
 $config['origin'] = '*';
 
@@ -29,6 +29,18 @@ $config['database'] = [
     'stricton' => FALSE,
     'failover' => array(''),
     'save_queries' => TRUE
+];
+
+$config['email_config']=[
+    'protocol' => 'smtp',
+    'smtp_host' => 'example.com',
+    'smtp_port' => 25,
+    'smtp_user' => 'info@example.com',
+    'smtp_pass' => 'p@ssL0rD',
+    'smtp_timeout' => 30,
+    'charset'=>'utf-8',
+    'mailtype'=>'html',
+    'newline'=>'\r\n'
 ];
 
 $config['error_codes'][404] = $config['api_name'] . ' :: End-point or method :: not found!';

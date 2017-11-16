@@ -12,6 +12,9 @@ $route->get('/', function($db){
 });
 
 
+$route->get('/test/filestorage', 'Test@filedatabase_get');
+$route->post('/test/filestorage', 'Test@filedatabase_post');
+$route->delete('/test/filestorage', 'Test@filedatabase_delete');
 
 
 
