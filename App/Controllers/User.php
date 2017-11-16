@@ -20,10 +20,26 @@ class User {
     
     
     public static function post($db,$a,$b){
+        
         $user=Auth::validate();
+        
+        $mail=Lib::load('Email',Config::item('email_config'));
         error_reporting(E_ALL);
         ini_set('display_errors',1);
-        $mail=Lib::load('Email',Config::item('email_config'));
+        $validator=Lib::load('validator');
+        
+        $rules_array = array(
+        'name'=>array('type'=>'string',  'required'=>true, 'min'=>3, 'max'=>10, 'trim'=>true),
+        'email'=>array('type'=>'email', 'required'=>true, 'min'=>1, 'max'=>500, 'trim'=>true));
+        
+        
+        $validator->addSource(Request::post());
+        $validator->addRules($rules_array);
+        $validator->run();
+        
+        if(sizeof($validator->errors) > 0){
+            Response::json(['user'=>$user,'errors'=>$validator->errors],500);
+        }
         
         $mail->from('example@king-api.local','King API APP');
         $mail->reply_to('my-email@gmail.com', 'Explendid Videos');

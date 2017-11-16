@@ -18,6 +18,10 @@ $route->delete('/test/filestorage', 'Test@filedatabase_delete');
 
 
 
+$route->post('/test/translate/{:any}/{:any}', 'Test@translate');
+
+
+
 
 
 $route->get('/misko/{:id}/{:name}', 'User@index');

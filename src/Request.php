@@ -27,7 +27,7 @@ class Request {
         }
 
         if ($key) {
-            return $filtered_post[$key];
+            return @$filtered_post[$key];
         }
         return $filtered_post;
     }
