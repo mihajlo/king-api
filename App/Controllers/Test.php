@@ -1,5 +1,5 @@
 <?php
-/*
+/* 
  * The MIT License
  *
  * Copyright 2017 mihajlo.
